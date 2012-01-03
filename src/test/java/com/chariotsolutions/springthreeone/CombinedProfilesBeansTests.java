@@ -2,7 +2,6 @@ package com.chariotsolutions.springthreeone;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ActiveProfiles;
@@ -10,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static junit.framework.Assert.assertNotNull;
-import static junit.framework.Assert.assertNull;
 
 /**
  * User: gordondickens
@@ -19,7 +17,7 @@ import static junit.framework.Assert.assertNull;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-@ActiveProfiles(profiles = {"dev","prod"})
+@ActiveProfiles(profiles = {"dev", "prod"})
 public class CombinedProfilesBeansTests {
 
     @Autowired

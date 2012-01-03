@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <beans profile="dev">
+        <bean id="constructorBean" class="com.chariotsolutions.springthreeone.SimpleBean"
+              c:myString="Constructor Set"/>
+
+        <bean id="doubleDownBean" class="com.chariotsolutions.springthreeone.SimpleBean"
+              c:myString="Constructor Set"
+              c:other="Look at the names in the C namespace"/>
+
+        <bean id="setterBean" class="com.chariotsolutions.springthreeone.SimpleBean">
+            <property name="myString" value="Setter Set"/>
+        </bean>
+    </beans>
+
+    <beans profile="prod">
+        <bean id="prodBean" class="com.chariotsolutions.springthreeone.SimpleBean">
+            <property name="myString" value="Setter Set - in Production YO!"/>
+        </bean>
+    </beans>
+</beans>

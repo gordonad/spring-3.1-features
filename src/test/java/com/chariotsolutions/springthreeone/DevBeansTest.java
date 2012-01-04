@@ -20,7 +20,7 @@ import static junit.framework.Assert.assertNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 @ActiveProfiles(profiles = "dev")
-public class DevBeansTests {
+public class DevBeansTest {
 
     @Autowired
     ApplicationContext applicationContext;

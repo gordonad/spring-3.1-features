@@ -15,8 +15,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class MyEnvironmentTests {
-    private static final Logger logger = LoggerFactory.getLogger(MyEnvironmentTests.class);
+public class MyEnvironmentTest {
+    private static final Logger logger = LoggerFactory.getLogger(MyEnvironmentTest.class);
     
     @Autowired
     MyEnvironment myEnvironment;

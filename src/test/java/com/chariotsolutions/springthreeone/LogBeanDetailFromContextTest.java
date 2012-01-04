@@ -20,8 +20,8 @@ import java.lang.annotation.Annotation;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class LogBeanDetailFromContext {
-    private static final Logger logger = LoggerFactory.getLogger(LogBeanDetailFromContext.class);
+public class LogBeanDetailFromContextTest {
+    private static final Logger logger = LoggerFactory.getLogger(LogBeanDetailFromContextTest.class);
 
     @Autowired
     ApplicationContext applicationContext;

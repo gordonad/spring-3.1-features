@@ -18,7 +18,7 @@ import static junit.framework.Assert.assertNotNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 @ActiveProfiles(profiles = {"dev", "prod"})
-public class CombinedProfilesBeansTests {
+public class CombinedProfilesBeansTest {
 
     @Autowired
     ApplicationContext applicationContext;

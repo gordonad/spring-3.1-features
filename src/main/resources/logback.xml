@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
+<configuration debug="true" scan="true" scanPeriod="5 seconds">
+
+    <property resource="logback.properties" />
+
+    <!--
+      <if condition='isNull(property("spring.profiles.active"))'>
+       <then>
+       </then>
+       <else>
+         <property name="profiles value="${spring.profiles.active}" />
+       </else>
+      </if>
+    -->
+
+
+    <!--
+      <if condition='isNull(property("catalina.home"))'>
+       <then>
+       </then>
+       <else>
+         <property name="log.dir" value="${catalina.home}/logs" />
+       </else>
+      </if>
+    -->
 
     <!-- To enable JMX Managment -->
-    <jmxConfigurator />
+    <!--<jmxConfigurator />-->
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
 
@@ -13,8 +36,8 @@
         </encoder>
     </appender>
 
-    <logger name="com.chariotsolutions" level="debug" />
-    <logger name="org.springframework" level="warn" />
+    <logger name="com.chariotsolutions" level="debug"/>
+    <logger name="org.springframework" level="warn"/>
 
     <!--<logger name="org.springframework.beans" level="debug" />-->
     <!--<logger name="org.springframework.transaction" level="warn" />-->
@@ -22,6 +45,6 @@
     <!--<logger name="org.springframework.dao" level="debug" />-->
 
     <root level="warn">
-        <appender-ref ref="console" />
+        <appender-ref ref="console"/>
     </root>
 </configuration>

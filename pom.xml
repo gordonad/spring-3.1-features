@@ -9,7 +9,6 @@
     <name>Spring 3.1 Features</name>
 
     <properties>
-        <spring.default.profiles>dev,qa</spring.default.profiles>
         <aspectj.version>1.6.12.RELEASE</aspectj.version>
         <cglib.version>2.2.2</cglib.version>
         <commons.beanutils.version>1.8.3</commons.beanutils.version>
@@ -427,8 +426,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin}</version>
                 <configuration>
-                    <printSummary>false</printSummary>
-                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <useFile>false</useFile>
+                    <skipTests>false</skipTests>
+                    <failIfNoTests>true</failIfNoTests>
+                    <printSummary>true</printSummary>
+                    <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>
             </plugin>
             <plugin>

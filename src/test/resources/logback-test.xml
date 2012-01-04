@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
+<configuration debug="true" scan="true" scanPeriod="5 seconds">
+
+    <property resource="logback-test.properties" />
+
+    <!--
+      <if condition='isNull(property("catalina.home"))'>
+       <then>
+       </then>
+       <else>
+         <property name="log.dir" value="${catalina.home}/logs" />
+       </else>
+      </if>
+    -->
 
     <!-- To enable JMX Managment -->
-    <jmxConfigurator />
+    <!--<jmxConfigurator />-->
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
 

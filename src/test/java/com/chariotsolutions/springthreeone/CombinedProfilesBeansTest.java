@@ -31,5 +31,4 @@ public class CombinedProfilesBeansTest {
         SimpleBean prodBean = applicationContext.getBean("prodBean", SimpleBean.class);
         assertNotNull(prodBean);
     }
-
 }

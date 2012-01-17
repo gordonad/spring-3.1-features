@@ -12,11 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertNull;
 
-/**
- * User: gordondickens
- * Date: 1/3/12
- * Time: 1:58 PM
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 @ActiveProfiles(profiles = "dev")
@@ -36,5 +31,4 @@ public class DevBeansTest {
         SimpleBean prodBean = applicationContext.getBean("prodBean", SimpleBean.class);
         assertNull(prodBean);
     }
-
 }

@@ -5,8 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="businessService" class="com.chariotsolutions.springthreeone.business.SimpleBusinessServiceImpl"/>
 
-    <beans profile="dev">
+    <beans profile="dev,qa">
         <bean id="constructorBean" class="com.chariotsolutions.springthreeone.SimpleBean"
               c:myString="Constructor Set"/>
 
@@ -20,7 +21,7 @@
     </beans>
 
     <beans profile="prod">
-        <bean id="prodBean" class="com.chariotsolutions.springthreeone.SimpleBean">
+        <bean id="setterBean" class="com.chariotsolutions.springthreeone.SimpleBean">
             <property name="myString" value="Setter Set - in Production YO!"/>
         </bean>
     </beans>

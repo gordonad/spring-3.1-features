@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true" scan="true" scanPeriod="5 seconds">
 
-    <property resource="logback.properties" />
+    <property resource="logconfig/logback.properties" />
 
     <!--
       <if condition='isNull(property("spring.profiles.active"))'>
@@ -24,10 +24,12 @@
       </if>
     -->
 
-    <!-- To enable JMX Managment -->
-    <!--<jmxConfigurator />-->
+    <include resource="logconfig/headerconfig.xml" />
+    <include resource="logconfig/consolelog.xml" />
+    <include resource="logconfig/tracefile.xml" />
+    <include resource="logconfig/springbeans.xml" />
+    <include resource="logconfig/hibernatefile.xml" />
 
-    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -35,6 +37,13 @@
             <!--      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern> -->
         </encoder>
     </appender>
+
+
+
+
+
+
+
 
     <logger name="com.chariotsolutions" level="debug"/>
     <logger name="org.springframework" level="warn"/>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    <appender class="ch.qos.logback.core.ConsoleAppender" name="consolelog">
+        <encoder>
+            <pattern>%-5level %logger{0} - &lt;%msg&gt;%n</pattern>
+        </encoder>
+    </appender>
+</included>
